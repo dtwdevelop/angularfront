@@ -1,0 +1,62 @@
+<div class="modal fade bd-example-modal-lg" tabindex="-1" id="selectedImageModal" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="selectedImage" *ngIf="selectedImage">
+
+
+                <img class="img-responsive"   src="{{selectedImage.url}}" >
+                <div class="arrow-back" (click)=navigate(false)>
+                    &lt;
+                </div>
+                <div class="caption">
+                    <p><strong>{{selectedImage.title}}</strong></p>
+                    <p>{{selectedImage.caption}}</p>
+                </div>
+                <div class="arrow-forward" (click)=navigate(true)>
+                    &gt;
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ul id="thumbnailsList">
+    <li *ngFor="let image of datasource" >
+        <img class="rounded" src="{{image.url}}" class="tn"
+             width="191" height="146"
+             data-toggle="modal" data-target="#selectedImageModal"
+             (click)=setSelectedImage(image)>
+    </li>
+</ul>
+
+<section id="portfolio" class="portfolio-section-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title text-center">
+                    <h3>Our Portfolio</h3>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+
+                <!-- Start Portfolio items -->
+                <ul id="portfolio-list">
+                    <li>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio/img1.jpg" class="img-responsive" alt="" />
+                            <div class="portfolio-caption">
+                                <h4>Portfolio Title</h4>
+                                <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
+                                <a href="#" class="link-2"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- End Portfolio items -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Portfolio Section -->

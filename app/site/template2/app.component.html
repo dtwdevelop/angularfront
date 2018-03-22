@@ -1,0 +1,142 @@
+<!-- Navigation -->
+<nav-bar class="hedernav"></nav-bar>
+<!-- Start Home Page Slider -->
+<section id="page-top">
+    <!-- Carousel -->
+    <div *ngIf="!slide" id="main-slide" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#main-slide" data-slide-to="0" class="active"></li>
+            <li data-target="#main-slide" data-slide-to="1"></li>
+            <li data-target="#main-slide" data-slide-to="2"></li>
+        </ol>
+        <!--/ Indicators end-->
+        <!-- Carousel inner -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img class="img-responsive" src="images/header-bg-1.jpg" alt="slider">
+                <div class="carousel-caption">
+                    <div class="col-md-12 text-center visible-xs-block ">
+                        <span><strong>Time for change</strong> </span>
+                        <a href="http://old-studion.centerpc.co.uk" class="page-scroll btn btn-primary animated1">Old site</a>
+                        <a href="https://bitbucket.org/dtwdevelop/" class="page-scroll btn btn-primary animated1"> &nbsp; <i class="fa fa-bitbucket" aria-hidden="true"></i></a>
+                    </div>
+
+                </div>
+                <div class="slider-content">
+
+
+                    <div class="col-md-12 text-center">
+                        <h1 class="animated3">
+
+
+                            <span><strong translate>Time for change</strong> </span>
+                        </h1>
+                        <p class="animated2" translate>Build in progress ...</p>
+                        <a href="http://old-studion.centerpc.co.uk" target="_blank" class="page-scroll btn btn-primary animated1">Old site</a>
+                        <a href="https://bitbucket.org/dtwdevelop/" target="_blank" class="page-scroll btn btn-primary animated1">Bitbucket &nbsp;<i class="fa fa-bitbucket" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Carousel inner end-->
+        <!-- Controls -->
+        <a class="left carousel-control" href="#main-slide" data-slide="prev">
+            <span><i class="fa fa-angle-left"></i></span>
+        </a>
+        <a class="right carousel-control" href="#main-slide" data-slide="next">
+            <span><i class="fa fa-angle-right"></i></span>
+        </a>
+    </div>
+    <!-- /carousel -->
+</section>
+<!-- End Home Page Slider -->
+<div class="scroll"></div>
+<router-outlet></router-outlet>
+
+<!-- End Portfolio Section -->
+<!-- Start Fun Facts Section -->
+<section class="fun-facts">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="counter-item">
+
+                    <i class="fa  fa-upload"></i>
+                    <div class="timer" id="item1" data-to="991" ></div>
+                    <h5 translate>Files uploaded</h5>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="counter-item">
+                    <i class="fa fa-check"></i>
+                    <div class="timer" id="item2" data-to="5" ></div>
+                    <h5 translate >Projects completed</h5>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="counter-item">
+                    <i class="fa fa-code"></i>
+                    <div class="timer" id="item3" data-to="2000" ></div>
+                    <h5 translate>Lines of code written</h5>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="counter-item">
+                    <i class="fa fa fa-bug"></i>
+                    <div class="timer" id="item4" data-to="1000" ></div>
+                    <h5 translate >Total bug</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Fun Facts Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title text-center">
+                    <h3 translate>Contact With Us</h3>
+
+                </div>
+            </div>
+        </div>
+<contact></contact>
+        <div class="row">
+        </div>
+    </div>
+    <footer class="style-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-xs-12">
+                    <span class="copyright">Copyright &copy; <a href="http://guardiantheme.com">GuardinTheme</a> 2015</span>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <div class="footer-social text-center">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <div class="footer-link">
+                        <ul class="pull-right">
+                            <li><a href="https://angular.io/">Angular 4</a>
+                            </li>
+                            <li><a href="https://laravel.com">Laravel</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+
+

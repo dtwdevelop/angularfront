@@ -1,0 +1,61 @@
+<!-- Start Portfolio Modal Section -->
+<div class="section-modal modal fade" id="portfolio-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="section-title text-center">
+                    <h3 translate>Portfolio Details</h3>
+                    <p translate>Works</p>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-6">
+                    <img *ngIf="fullImage" src="works/{{fullImage.url}}"  class="" alt="..">
+                </div>
+            </div><!-- /.row -->
+        </div>
+    </div>
+</div>
+<!-- Start Portfolio Section -->
+<section id="portfolio" class="portfolio-section-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title text-center">
+                    <h3 translate>Our Portfolio</h3>
+                    <img *ngIf="status" src="/images/loading.gif" width="100" height="100" alt="loading"/>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Start Portfolio items -->
+                <ul id="portfolio-list" >
+
+                    <li *ngFor="let image of images">
+                        <div class="portfolio-item">
+                            <img src="/works/{{image.url}}"  class="img-responsive" alt="" />
+                            <div class="portfolio-caption">
+                                <h4></h4>
+                                <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i (click)="imageClick(image)" class="fa fa-magic"></i></a>
+
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+                <!-- End Portfolio items -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Portfolio Section -->

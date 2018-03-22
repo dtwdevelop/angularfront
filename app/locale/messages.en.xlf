@@ -1,0 +1,38 @@
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+	<trans-unit id="nav1" datatype="html">
+      <source> Portfolio</source>
+      <target state="navigation1"> Portfolio</target>
+    </trans-unit>
+	 <trans-unit id="nav2" datatype="html">
+      <source>Last news </source>
+      <target state="navigation2">Last news</target>
+    </trans-unit>
+    <trans-unit id="nav3" datatype="html">
+      <source>Services</source>
+      <target state="navigation3"> Services</target>
+    </trans-unit>
+      <trans-unit id="nav4" datatype="html">
+          <source>Blog</source>
+         <target state="navigation4">Blog</target>
+    </trans-unit>
+	<trans-unit id="nav5" datatype="html">
+     <source>Contact</source>
+     <target state="navigation5"> Contact</target>
+   </trans-unit>
+   <trans-unit id="lastNews" datatype="html">
+  <source>Latest News!</source>
+  <target state="new">Latest News!</target>
+  </trans-unit>
+   <trans-unit id="title-develop" datatype="html">
+  <source>Time for change</source>
+  <target state="new">Time for change</target>
+  </trans-unit>
+   <trans-unit id="in-build" datatype="html">
+  <source>Build in progress ...</source>
+  <target state="new">Build in progress ...</target>
+  </trans-unit>
+  </body>
+</file>
+</xliff>

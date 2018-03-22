@@ -1,0 +1,56 @@
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" syle="background:#000">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" onclick="$('.slide').animatescroll();" routerLink="/">Screw Design</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a routerLink="/"></a>
+                </li>
+                <li>
+                    <!--<a pageScroll href="#contact">Contact</a>-->
+                    <a translate onclick="$('.scroll').animatescroll();" class="page-scroll" routerLink="/portfolio">Portfolio</a>
+                </li>
+                <li>
+                    <a translate onclick="$('.scroll').animatescroll();" class="page-scroll" routerLink="/">Last news</a>
+                </li>
+
+                <li>
+                    <a translate onclick="$('.scroll').animatescroll();" class="page-scroll" routerLink="/services">Services</a>
+                </li>
+
+                <li>
+                    <a translate  onclick="$('.scroll').animatescroll();" class="page-scroll" routerLink="/blog">Blog</a>
+                </li>
+
+                <li>
+                    <a translate onclick="$('.contact').animatescroll();"  class="page-scroll" >Contact</a>
+                </li>
+                <li>
+                <div class="dropdown">
+                    <a class="btn  dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <i class="fa fa-globe fa-2x" aria-hidden="true"></i>
+                    </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><button  class="btn btn-default" (click)="changeLanguage('en')" href="#">En</button></li>
+                    <li ><button  class="btn btn-default" (click)="changeLanguage('ru')" href="#">Rus</button></li>
+                    <li><button  class="btn btn-default" (click)="changeLanguage('lv')" href="#">Lv</button></li>
+                </ul>
+                </div>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>

@@ -1,0 +1,36 @@
+<section *ngIf="true" id="about-us" class="about-us-section-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="section-title text-center">
+                    <h3>Blog</h3>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="row" [@Content]="pactive">
+            <div class="col-md-6">
+                <div class="welcome-section text-center">
+                    <img src="images/about-01.jpg" class="img-responsive" alt="..">
+                    <h4>{{dvalue.title}}</h4>
+                    <div class="border"></div>
+                    <p>{{dvalue.post}}t</p>
+                    <div class="col-md-4 col-xs-12">
+                    <div class="footer-social">
+                        <ul class="">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+
+                        </ul>
+                    </div>
+                    </div>
+                    <hr *ngIf="!status">
+
+                    <a *ngIf="!status" class="btn btn-default" onclick="$('.scroll').animatescroll();"  routerLink="/blog" role="button">Back</a>
+                </div>
+            </div>
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>

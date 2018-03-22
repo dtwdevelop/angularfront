@@ -1,0 +1,69 @@
+
+
+<section id="contact-us-section" class="contact-us-section pb-30 contact-me" >
+    <div class="container">
+        <!--Sec Title-->
+        <div class="section-title m-0 pb-28">
+            <h2 class="font-w-8 center"><span class="color">C</span>ONTACT US</h2>
+            <p class="font-w-6 center"></p>
+        </div>
+        <div class="section contact-us">
+            <div class="container">
+                <div class="outer-box">
+                    <div class="company-data">
+                        <ul class="row">
+
+
+                            <li class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="box"> <span class="fa fa-envelope"></span>
+                                    <a href="#">sample@gmail.com</a><br>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Contact Form Start -->
+                    <div class="form-box clearfix">
+                       <div class="row">
+                        <!--<ngb-alert *ngIf="!showAlert" [dismissible]="false">-->
+                        <!--<strong>Thank you! </strong>-->
+                        <!--Your message has been successfully sent. We will contact you very soon!-->
+                        <!--To send new contact press button.-->
+                        <!--</ngb-alert>-->
+                        <button (click)="goContact()" *ngIf="!showAlert" class=" btn btn-primary">Contact</button>
+                    </div>
+                        <form *ngIf="showAlert" (ngSubmit)="onSubmit(f);f.reset()" #f="ngForm"  id="contactForm" novalidate class="shake scroll-reveal">
+                            <div class="form-group col-sm-6">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your name" #name="ngModel" [(ngModel)]="model.name" required>
+                                <span [hidden]="name.valid || name.pristine" class=" text-danger">
+                        Name is required
+                        </span>
+                                <div class="help-block with-errors">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <input type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" [(ngModel)]="model.email" #email="ngModel" name="email" type="email" class="form-control" id="email" placeholder="Your email" required>
+                                <span [hidden]="email.valid || email.pristine" class=" text-danger">
+                        Email is required , like yourmail@email.com
+                        </span>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group col-sm-12">
+                                <textarea id="message" class="form-control" rows="6" placeholder="Write your message here"  #text="ngModel" [(ngModel)]="model.text" name="text" required></textarea>
+                                <span [hidden]="text.valid || text.pristine" class=" text-danger">
+                        Message is required
+
+                        </span>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="col-sm-12"> <button type="submit" name="but"  [disabled]="!f.valid" class="btn" translate>Send Meaasage</button>
+                                <div id="msgSubmit"></div>
+                            </div>
+                        </form>
+
+                    </div>
+                    <!-- Contact Form End -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

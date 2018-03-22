@@ -1,0 +1,38 @@
+
+<!--<div *ngFor="let data of datas | orderBy :[query] ">-->
+        <!--<detail  [status]="true" [dvalue]="data"></detail>-->
+    <!--</div>-->
+<!--</div>-->
+<!-- Start About Us Section -->
+
+<section id="about-us" class="about-us-section-1">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="section-title text-center">
+                    <h3>Blog</h3>
+                    <img *ngIf="status2" src="/images/loading.gif" width="100" height="100" alt="loading"/>
+
+                    <p>Search&nbsp;<input [(ngModel)]="q" id="q"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4" *ngFor="let data of datas | filter: [q] ">
+                <div class="welcome-section text-center">
+                    <img src="images/about-01.jpg" class="img-responsive" alt="..">
+                    <h4>{{data.title}}</h4>
+                    <div class="border"></div>
+                    <p>{{data.post}}</p>
+                    <a  class="btn btn-default" onclick="$('.scroll').animatescroll();" [routerLink]="['/blog',data.id+'.page']" role="button">more ...</a>
+
+        </div>
+                </div>
+
+    </div><!-- /.row -->
+
+    </div><!-- /.container -->
+</section>
+

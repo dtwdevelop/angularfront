@@ -1,0 +1,46 @@
+<section id="blog-grid" class="blog-grid">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="section-title text-center">
+                    <h3>Blog</h3>
+                    <img *ngIf="status2" src="/images/loading.gif" width="100" height="100" alt="loading"/>
+                    <div class="blog_search">
+                        <input type="text" name="q" [(ngModel)]="q" id="q" placeholder="Enter Search Keywords">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let data of datas | filter: [q] ">
+                <div class="single_blog_item_area center">
+                    <a onclick="$('.scroll').animatescroll();" [routerLink]="['/blog',data.id+'.page']"><img src="images/blog_grid_img_01.jpg" class="img-responsive" alt="images"></a>
+                    <ul class="meta">
+                        <li>By <span class="color font-w-6">By admin</span></li>
+                        <li>Dated <span>date</span></li>
+                    </ul>
+                    <h3><a onclick="$('.scroll').animatescroll();" [routerLink]="['/blog',data.id+'.page']">{{data.title}}</a></h3>
+                    <p>{{data.post}}</p>
+                </div>
+            </div><!-- col-md-4-->
+
+        </div><!-- row -->
+        <!--<div class="blog_pagination">-->
+            <!--<nav>-->
+                <!--<ul class="pagination pagination-lg">-->
+                    <!--<li class="page-item active"><a class="page-link" href="#">1</a></li>-->
+
+                    <!--<li class="page-item"><a href="blog-grid.html">2</a></li>-->
+
+                    <!--<li class="page-item">-->
+                        <!--<a href="blog-grid-2.html"><i class="fa fa-arrow-right"></i></a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</nav>-->
+        <!--</div>-->
+    </div><!-- container -->
+</section>
+
