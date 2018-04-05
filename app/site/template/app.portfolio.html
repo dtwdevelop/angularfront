@@ -26,11 +26,12 @@
                             <!-- Portfolio Wrap -->
 
                             <div class="row portfolio-container" >
+                                <img *ngIf="status" src="/images/loading.gif" width="100" height="100" alt="loading"/>
+
                                 <!-- single portfolio -->
                                 <div *ngFor="let image of images;let pic=index"  class="col-md-4 col-sm-6 col-xs-12 work php">
                                     <a (click)=showConfirm(image.url) >
 
-                                    <img *ngIf="status" src="/images/loading.gif" width="100" height="100" alt="loading"/>
 
                                     <img src="/works/{{image.url}}"  class="img-responsive" alt="">
                                     <div class="work-inner">

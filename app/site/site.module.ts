@@ -13,8 +13,8 @@ import {GalleryComponent} from "./app.gallery";
 import {PortfolioComponent} from "./app.portfolio";
 import {Filter,  OrderBy} from "./app.filter";
 import {FormsModule} from "@angular/forms";
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {Ng2PageScrollModule} from 'ng2-page-scroll';
+// import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+// import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import {TranslateModule,TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClientModule,HttpClient} from '@angular/common/http';
@@ -25,6 +25,7 @@ import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
 import { ParticlesModule } from 'angular-particle';
 import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 import { ConfirmComponent } from './app.confirm';
+import { CountToModule } from 'angular-count-to';
 
 
 
@@ -69,7 +70,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     SlideMenuModule,
     Ng2AutoCompleteModule,
     ParticlesModule,
-    BootstrapModalModule
+    BootstrapModalModule,
+    CountToModule
   ],
 
   entryComponents: [
