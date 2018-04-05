@@ -6,7 +6,8 @@
                     <h3>Blog</h3>
                     <img *ngIf="status2" src="/images/loading.gif" width="100" height="100" alt="loading"/>
                     <div class="blog_search">
-                        <input type="text" name="q" [(ngModel)]="q" id="q" placeholder="Enter Search Keywords">
+                        <input  auto-complete type="text" name="q" [(ngModel)]="q" id="q" [source]="sr"  placeholder="Enter Search Keywords">
+
 
                     </div>
                 </div>
@@ -17,12 +18,12 @@
         <div class="row">
             <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let data of datas | filter: [q] ">
                 <div class="single_blog_item_area center">
-                    <a onclick="$('.scroll').animatescroll();" [routerLink]="['/blog',data.id+'.page']"><img src="images/blog_grid_img_01.jpg" class="img-responsive" alt="images"></a>
+                    <a [scrollTo]="'#scrollside'" [scrollDuration]="1000" [scrollOffset]="-100"  [routerLink]="['/blog',data.id+'.page']"><img src="images/blog_grid_img_01.jpg" class="img-responsive" alt="images"></a>
                     <ul class="meta">
-                        <li>By <span class="color font-w-6">By admin</span></li>
-                        <li>Dated <span>date</span></li>
+                        <!--<li>By <span class="color font-w-6">By admin</span></li>-->
+                        <li>2018 <span>date</span></li>
                     </ul>
-                    <h3><a onclick="$('.scroll').animatescroll();" [routerLink]="['/blog',data.id+'.page']">{{data.title}}</a></h3>
+                    <h3><a [scrollTo]="'#scrollside'" [scrollDuration]="1000" [scrollOffset]="-100"  [routerLink]="['/blog',data.id+'.page']">{{data.title}}</a></h3>
                     <p>{{data.post}}</p>
                 </div>
             </div><!-- col-md-4-->

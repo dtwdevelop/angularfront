@@ -27,8 +27,9 @@ export class PostComponent {
     public datas :any;
     public show = new Date();
     public result;
-    public status  =true;
+    public status  = true;
     public status2:boolean=false;
+    public sr : string[] =[];
 
 
     constructor(server:ServerAppService){
@@ -37,6 +38,9 @@ export class PostComponent {
             (d)=> {
                 this.datas = d.data
                 this.status2 = false
+                 d.data.map(val => {
+                     this.sr.push(val.title);
+                 })
             }
 
         );

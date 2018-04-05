@@ -7,6 +7,7 @@ import {ServerAppService} from './post.service';
 import {LanguageProvider} from './app.servicelanguage'
 import {TranslateService} from '@ngx-translate/core';
 
+
 @Component({
     selector: 'site',
     templateUrl: '/template/app.component.html',
@@ -22,12 +23,14 @@ export class SiteComponent implements  OnInit {
     public  datenow  = new Date();
     @Input() slide
 
+
     constructor(private translate:TranslateService){
 
         translate.setDefaultLang('en');
     }
 
     ngOnInit(){
+
     }
 
     closeAlert(alert:any){

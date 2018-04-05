@@ -1,37 +1,48 @@
 <header id="home">
-    <div class="header-top-area">
+    <div class="header-top-area" ng-sticky [offSet]="0" [addClass]="'menu-bg'">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3" >
                     <!-- START LOGO -->
-                    <div class="logo"> <a onclick="$('.slide').animatescroll();" routerLink="/">Screw Design</a> </div>
+
+                    <div class="logo"> <a [scrollTo]="'#home'"  [scrollDuration]="1000" [scrollOffset]="-100"  routerLink="/">Screw Design</a> </div>
                     <!-- END LOGO -->
-                    <div class="mobile-nav"></div>
+                    <div class="mobile-nav">
+
+                    </div>
+
                 </div>
                 <div class="col-md-9" >
                     <!-- START MAIN MENU -->
-                    <nav class="navbar navbar-default">
+                    <nav class="navbar navbar-default" >
                         <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header"> </div>
+                        <div class="navbar-header">
+
+                        </div>
+
+                        <cuppa-slidemenu class=" visible-xs-block visible-sm-block " [menulist]="menuItemsArray" [config]="config" (open)="onMenuOpen()" (close)="onMenuClose()" (onItemSelect)="onItemSelect($event)"></cuppa-slidemenu>
+
+
+
                         <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse">
+                        <div class="collapse navbar-collapse in" id="umobile">
                             <div class="navigation">
-                                <ul class="nav navbar-nav">
-                                    <li><a translate  onclick="$('.scroll').animatescroll();" class="page-scroll" routerLink="/">Home</a>
+                                <ul class="nav navbar-nav" >
+                                    <li><a [scrollTo]="'#scrollside'" [scrollDuration]="1000" [scrollOffset]="-100"  routerLink="/">Home</a>
 
                                     </li>
 
-                                    <li><a translate  onclick="$('.scroll').animatescroll();" class="page-scroll" routerLink="/services">Services</a>
+                                    <li><a  [scrollTo]="'#scrollside'" [scrollDuration]="1000" [scrollOffset]="-100"   routerLink="/services">Services</a>
 
                                     </li>
 
-                                    <li><a translate  onclick="$('.scroll').animatescroll();" class="page-scroll" routerLink="/portfolio">Portfolio</a>
+                                    <li><a [scrollTo]="'#scrollside'"  [scrollDuration]="1000" [scrollOffset]="-100"  routerLink="/portfolio">Portfolio</a>
 
                                     </li>
-                                    <li><a translate  onclick="$('.scroll').animatescroll();" class="page-scroll" routerLink="/blog">Blogs</a>
+                                    <li><a [scrollTo]="'#scrollside'" [scrollDuration]="1000" [scrollOffset]="-100"  routerLink="/blog">Blogs</a>
 
                                     </li>
-                                    <li><a translate onclick="$('.contact-me').animatescroll();"  class="page-scroll">Contact Us</a></li>
+                                    <li><a [scrollTo]="'#contact'" [scrollDuration]="1000" [scrollOffset]="-100" routerLink="/" >Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -42,8 +53,8 @@
             </div>
         </div>
     </div>
-    <!-- Start Particle area -->
-    <section id="particle-area" class="particle-area slide">
+
+    <section id="particle-area" class="particle-area ">
         <div id="particles-js"></div>
         <div class="container">
             <div class="row">
@@ -54,10 +65,16 @@
                             <h3 class="font-w-8 font-55 ln-h-70 color-w">Time for  <span class="color">change</span>  <br>
                             </h3>
                             <p class="font-w-6 color-w ln-h-30 font-14 pb-20"> Welcome to my portfolio page </p>
-                            <a href="#contactus" class="btn smoth-scroll">Contact us</a> </div>
+                            <a [scrollTo]="'#contact'"  class="btn  smoth-scroll" style="color:white">Contact us</a> </div>
+                        <a href="http://old-studion.centerpc.co.uk" style="color:white" class=" btn smoth-scroll text-warning ">Old site</a>
+                        <a href="https://bitbucket.org/dtwdevelop/" style="color:white" class=" btn smoth-scroll text-warning  "> <i class="fa fa-bitbucket" style="color:white" aria-hidden="true"></i>&nbsp;Bitbucket</a>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
 </header>
+<!--<particles style="background: darkgreen" [params]="myParams" [style]="myStyle" [width]="width" [height]="height">-->
+<!--</particles>-->
+

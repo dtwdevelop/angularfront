@@ -18,7 +18,11 @@ import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import {TranslateModule,TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClientModule,HttpClient} from '@angular/common/http';
-
+import { ScrollToModule } from 'ng2-scroll-to-el';
+import { NgStickyDirective } from 'ng-sticky';
+import { SlideMenuModule } from 'cuppa-ng2-slidemenu/cuppa-ng2-slidemenu';
+import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
+import { ParticlesModule } from 'angular-particle';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http,'./language/i18n/', '.json');
@@ -39,7 +43,11 @@ export function HttpLoaderFactory(http: HttpClient) {
             deps: [HttpClient]
           }
         }
-    )
+    ),
+    ScrollToModule.forRoot(),
+    SlideMenuModule,
+    Ng2AutoCompleteModule,
+    ParticlesModule
   ],
   declarations: [
       SiteComponent,
@@ -54,6 +62,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     PortfolioComponent,
     Filter,
     OrderBy,
+    NgStickyDirective,
   ],
 
 })
