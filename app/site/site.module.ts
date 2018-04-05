@@ -23,12 +23,33 @@ import { NgStickyDirective } from 'ng-sticky';
 import { SlideMenuModule } from 'cuppa-ng2-slidemenu/cuppa-ng2-slidemenu';
 import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
 import { ParticlesModule } from 'angular-particle';
+import { BootstrapModalModule } from 'ng2-bootstrap-modal';
+import { ConfirmComponent } from './app.confirm';
+
+
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http,'./language/i18n/', '.json');
 }
 
 @NgModule({
+  declarations: [
+    SiteComponent,
+    CommentsComponent,
+    PostComponent,
+    NavBarComponent,
+    WelcomeComponent,
+    DetailComponent,
+    ContactComponent,
+    ServicesComponent,
+    GalleryComponent,
+    PortfolioComponent,
+    Filter,
+    OrderBy,
+    NgStickyDirective,
+    ConfirmComponent
+  ],
   imports: [
     CommonModule,
       FormsModule,
@@ -47,22 +68,12 @@ export function HttpLoaderFactory(http: HttpClient) {
     ScrollToModule.forRoot(),
     SlideMenuModule,
     Ng2AutoCompleteModule,
-    ParticlesModule
+    ParticlesModule,
+    BootstrapModalModule
   ],
-  declarations: [
-      SiteComponent,
-    CommentsComponent,
-    PostComponent,
-    NavBarComponent,
-    WelcomeComponent,
-    DetailComponent,
-    ContactComponent,
-    ServicesComponent,
-    GalleryComponent,
-    PortfolioComponent,
-    Filter,
-    OrderBy,
-    NgStickyDirective,
+
+  entryComponents: [
+    ConfirmComponent
   ],
 
 })
