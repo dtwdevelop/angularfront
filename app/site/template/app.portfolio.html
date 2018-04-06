@@ -10,6 +10,8 @@
                 <div class="section-title">
                     <h2 class="font-w-8"><span class="color"></span>My works</h2>
                     <p class="font-w-6">Last work</p>
+                    <img *ngIf="status" src="/images/loading.gif" width="100" height="100" alt="loading"/>
+
                 </div>
                 <!-- Portfolio Filters -->
                 <div class="container">
@@ -26,7 +28,6 @@
                             <!-- Portfolio Wrap -->
 
                             <div class="row portfolio-container" >
-                                <img *ngIf="status" src="/images/loading.gif" width="100" height="100" alt="loading"/>
 
                                 <!-- single portfolio -->
                                 <div *ngFor="let image of images;let pic=index"  class="col-md-4 col-sm-6 col-xs-12 work php">
